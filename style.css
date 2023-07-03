@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+:root{
+    --cream: hsl(30, 38%, 92%);
+    --dark-cyan: hsl(158, 36%, 37%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: var(--cream);
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    'image information';
+    margin: 50px auto;
+    max-width: 700px;
+    font-family: Montserrat, Helvetica, sans-serif;
+}
+
+
+img{
+    width: 350px;
+    border-radius: 10px 0px 0px 10px;
+    margin: 0px;
+}
+
+.image{
+    margin: 0 auto;
+}
+
+.information{
+    width: 350px;
+    height: 525px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+.information h1 {
+    font-family: Fraunces, 'Times New Roman', Times, serif;
+    margin: 25px 0px;
+    font-weight: 700;
+    line-height: 1em;
+    font-size: 2.4em;
+}
+
+.content{
+    padding: 35px;
+}
+
+#perfume{
+    color: var(--Dark-grayish-blue);
+}
+
+#description{
+    line-height: 1.7em;
+    color: var(--Dark-grayish-blue);
+    margin-right: 20px;
+    padding-bottom: 7px;
+
+}
+
+.information a{
+    display: list-item;
+    font-size: 1em;
+    list-style-position: inside;
+    list-style-image: url(images/icon-cart.svg);
+    text-align: center;
+    margin: auto;
+    padding: 17px 25px;
+    text-decoration: none;
+    background-color: var(--dark-cyan);
+    color: white;
+    border-radius: 10px;
+}
+
+.information a:hover{
+    background-color: var(--Very-dark-blue);
+}
+
+#values{
+    display: grid;
+    grid-template-areas: 
+    'price del-price';
+    padding: 20px 0px;
+}
+
+#price{
+    font-size: 2.2em;
+    color: var(--dark-cyan);
+    font-family: Fraunces, 'Times New Roman', Times, serif;
+    grid-area: price;
+}
+
+#del-price{
+    color: var(--Dark-grayish-blue);
+    grid-area: del-price;
+    padding-top: 12px;
+    margin-left: -30px;
+}
+
+@media screen and (max-width: 730px){
+    .container{
+        grid-template-areas: 
+        'image' 
+        'information';
+        margin-top: 50px;
+    }
+
+    img{
+        border-radius: 10px 10px 0px 0px;
+        margin: 0 auto;
+    }
+
+    .information{
+        margin: 0 auto;
+        border-radius: 0px 0px 10px 10px;
+        height: 385px;
+
+    }
+
+    .information h1{
+        margin: 15px 0px;
+        font-size: 1.8em;
+    }
+
+    .information #description{
+        margin: 0px;
+        font-size: 0.8em;
+    }
+
+    .information #prince{
+        font-size: 1.8em;
+    }
+
+    .information #del-prince{
+        font-size: 0.8em;
+    }
+
+    .information a{
+        font-size: 0.8em;
+        padding: 12px
+    }
+    
+}
